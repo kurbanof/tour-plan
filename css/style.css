@@ -379,6 +379,30 @@ body {
   margin-right: 108px;
 }
 
+.navbar-bottom {
+  background-color: #0A223D;
+}
+
+.navbar-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 31px 0;
+}
+
+.navbar-menu__link {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.logo {
+  width: 177px;
+}
+
 .search {
   display: -webkit-box;
   display: -ms-flexbox;
