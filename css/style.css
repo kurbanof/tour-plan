@@ -349,6 +349,7 @@ template {
 body {
   font-family: 'Muliregular', sans-serif;
   color: #333333;
+  background-color: #F5FAFE;
 }
 
 .container {
@@ -357,7 +358,7 @@ body {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .navbar {
@@ -582,5 +583,66 @@ img {
     padding-top: 22px;
     padding-bottom: 22px;
   }
+}
+
+.breadcrumb-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 18px 0;
+  margin: 0;
+  list-style: none;
+}
+
+.breadcrumb-list__item:not(:last-child)::after {
+  content: '/';
+  margin-right: 4px;
+}
+
+.breadcrumb-list__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.rating-counter:last-child {
+  font-size: 1px;
+}
+
+.hotel {
+  padding-top: 23px;
+  padding-bottom: 70px;
+}
+
+.hotel-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hotel-name {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  margin-right: 14px;
+  display: inline-block;
+}
+
+.offer {
+  font-size: 10px;
+  line-height: 13px;
+  color: #ffffff;
+  background-color: #EC1F46;
+  padding: 4px 9px;
+  border-radius: 3px;
 }
 /*# sourceMappingURL=style.css.map */
