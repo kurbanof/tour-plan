@@ -7,8 +7,15 @@ var mySwiper = new Swiper('.swiper-container', {
   navigation: {
     nextEl: '.slider-button__next',
     prevEl: '.slider-button__prev',
+
   },
 
   effect: 'fade',
 
-})
+  keyboard: {
+    enabled: true},
+
+});
+
+
+
