@@ -64,12 +64,15 @@
       margin-bottom: 20px
   .card
     width: 339px
-  
-  
-   
-  
+  .reviews
+    &-slider
+      &__item
+        max-width: 580px
+        padding-left: 62px
+        padding-right: 62px
+        
 
-
+  
 @media ( max-width: 768px  )
   .container, 
   .newsletter-wrapper
@@ -129,6 +132,23 @@
   .card
     width: 100%
     height: 320px
+  .reviews
+    &-slider
+      &__item
+        max-width: 480px
+        padding-left: 50px
+        padding-right: 50px
+        padding-bottom: 36px
+      &__button
+          top: 45px
+          &--prev
+            left: 50%
+            margin-left: -90px
+            transform: translate(-50%, -50%)
+          &--next
+            right: 50%
+            margin-right: -90px
+            transform: translate(50%, -50%)
     
 
         
@@ -158,8 +178,16 @@
     width: 100%
   
   .card
-    
     height: 300px
+  .reviews
+    &-slider
+      &__item
+        max-width: 480px
+        padding-left: 30px
+        padding-right: 30px
+        &::after, &::before
+          display: none
+        
 
 @media ( max-width:480px  )    
   .card
