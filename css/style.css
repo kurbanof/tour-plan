@@ -648,7 +648,7 @@ img {
   line-height: 18px;
 }
 
-.swiper-container {
+.hotel-swiper {
   width: 100%;
   height: 100%;
   border-radius: 8px;
@@ -669,7 +669,7 @@ img {
   background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
 }
 
-.slider {
+.hotel__slider {
   width: 728px;
   height: 450px;
 }
@@ -854,8 +854,8 @@ img {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 500px 500px;
-  -ms-grid-columns: 350px 350px 350px;
-      grid-template: 500px 500px / 350px 350px 350px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template: 500px 500px / 1fr 1fr 1fr;
   gap: 30px 30px;
 }
 
@@ -973,7 +973,6 @@ img {
 }
 
 .packages__button {
-  font-weight: 600;
   font-size: 14px;
   line-height: 19px;
   background: #EC1F46;
@@ -1107,6 +1106,148 @@ img {
   top: 0;
 }
 
+.reviews {
+  padding: 40px 0 70px 0;
+}
+
+.reviews__title {
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 70px;
+}
+
+.reviews-slider__button {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: none;
+  z-index: 19;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  background-color: transparent;
+}
+
+.reviews-slider__button--next {
+  right: 18px;
+  background-image: url(../img/arrow-right.svg);
+}
+
+.reviews-slider__button--prev {
+  left: 18px;
+  background-image: url(../img/arrow-left.svg);
+}
+
+.reviews-slider__item {
+  background-color: #fff;
+  padding: 0 97px 30px 97px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  margin-top: 45px;
+  width: 730px;
+  position: relative;
+}
+
+.reviews-slider__item::before {
+  position: absolute;
+  content: '';
+  background-image: url(../img/quotes-left.svg);
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 48px;
+  top: 13px;
+  left: 64px;
+}
+
+.reviews-slider__item::after {
+  position: absolute;
+  content: '';
+  background-image: url(../img/quotes-right.svg);
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 48px;
+  top: 118px;
+  right: 64px;
+}
+
+.reviews-slider__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -45px;
+}
+
+.reviews-slider__avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 9px;
+}
+
+.reviews-slider__username {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #EC1F46;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.reviews-slider__date {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 13px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.reviews-slider__rating {
+  margin-bottom: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews-slider__text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 19px;
+  text-align: justify;
+  color: #000000;
+}
+
 .activities {
   padding: 60px 0 98px 0;
 }
@@ -1195,7 +1336,7 @@ img {
   .container {
     max-width: 960px;
   }
-  .slider {
+  .hotel__slider {
     width: 590px;
   }
   .swiper-slide__image {
@@ -1242,6 +1383,7 @@ img {
   }
   .hotel__slider {
     margin-bottom: 30px;
+    width: 100%;
   }
   .hotel-unit {
     -webkit-box-orient: horizontal;
@@ -1256,9 +1398,6 @@ img {
   .map {
     width: 340px;
     height: 210px;
-  }
-  .slider {
-    width: 100%;
   }
   .swiper-slide__image {
     width: 100%;

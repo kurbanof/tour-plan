@@ -1,0 +1,100 @@
+.reviews
+  padding: 40px 0 70px 0
+  &__title
+    font-size: 36px
+    line-height: 45px
+    text-align: center
+    text-transform: uppercase
+    margin: 0
+    margin-bottom: 70px
+  &-slider
+    &__button
+      top: 50%
+      transform: translateY(-50%)
+      position: absolute
+      width: 30px
+      height: 30px
+      border: none
+      z-index: 19
+      outline: none
+      border: none
+      cursor: pointer
+      background-repeat: no-repeat
+      background-position: center
+      background-size: 10px
+      background-color: transparent
+      &--next
+        right: 18px
+        background-image: url(../img/arrow-right.svg)
+     
+      &--prev
+        left: 18px
+        background-image: url(../img/arrow-left.svg)
+      
+    &__item
+      background-color: #fff
+      padding: 0 97px 30px 97px
+      border-radius: 8px  
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin: auto
+      margin-top: 45px
+      width: 730px
+      position: relative
+      &::before
+        position: absolute
+        content: ''
+        background-image: url(../img/quotes-left.svg)
+        background-repeat: no-repeat
+        width: 70px
+        height: 48px
+        top: 13px
+        left: 64px
+      &::after
+        position: absolute
+        content: ''
+        background-image: url(../img/quotes-right.svg)
+        background-repeat: no-repeat
+        width: 70px
+        height: 48px
+        top: 118px
+        right: 64px
+    &__profile
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-top: -45px
+    &__avatar
+      width: 90px
+      height: 90px
+      border-radius: 50%
+      object-fit: cover
+      margin-bottom: 9px
+    &__username
+      font-weight: bold
+      font-size: 12px
+      line-height: 15px
+      color: $primary
+      margin: 0
+      margin-bottom: 10px
+      
+
+    &__date
+      font-style: normal
+      font-weight: normal
+      font-size: 10px
+      line-height: 13px
+      color: #000000
+      margin-bottom: 5px
+    &__rating
+      margin-bottom: 33px
+      display: flex
+      align-items: center
+    &__text
+      margin: 0
+      font-size: 12px
+      line-height: 19px
+      text-align: justify
+      color: #000000
+      
