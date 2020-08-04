@@ -29,7 +29,27 @@ var miSwiper = new Swiper('.reviews-slider', {
     prevEl: '.reviews-slider__button--prev',
   },
 
+  keyboard: {
+    enabled: true
+  },
   
+});
+
+var mySlider = new Swiper('.packages-slider', {
+  // Optional parameters
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  keyboard: {
+    enabled: true
+  },
+
 });
 
 

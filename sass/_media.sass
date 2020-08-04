@@ -70,6 +70,11 @@
         max-width: 580px
         padding-left: 62px
         padding-right: 62px
+  .packages
+    &-grid
+      display: none
+    &-slider
+      display: block
         
 
   
@@ -140,16 +145,38 @@
         padding-right: 50px
         padding-bottom: 36px
       &__button
-          top: 45px
-          &--prev
-            left: 50%
-            margin-left: -90px
-            transform: translate(-50%, -50%)
+        top: 45px
+        &--prev
+          left: 50%
+          margin-left: -90px
+          transform: translate(-50%, -50%)
           &--next
             right: 50%
             margin-right: -90px
             transform: translate(50%, -50%)
+  .packages
+    &-slide
+      &__card
+        width: 50%
+      &__article
     
+@media ( max-width:630px  )
+  .packages
+    &-slide
+      &__card
+        width: 290px
+        top: 178px
+        
+        
+    &__article
+      display: none
+    &__price
+      flex-direction: column
+      align-items: baseline
+    &__new-price
+      margin-bottom: 5px
+    &__button
+      width: 100%
 
         
     
@@ -192,8 +219,15 @@
 @media ( max-width:480px  )    
   .card
     height: 255px
+  .packages-slide__card 
+    width: 72%
 
-  
+@media ( max-width:350px  )
+  .packages
+    &-slide
+      &__card
+        width: 91%
+        
 
   
    
