@@ -417,6 +417,8 @@ button {
 
 .navbar-top__menu-button {
   display: none;
+  border: none;
+  outline: none;
 }
 
 .navbar__search {
@@ -508,6 +510,10 @@ button {
   font-size: 14px;
   line-height: 18px;
   color: #333333;
+}
+
+.navbar-menu__link_mobile_visible {
+  display: none;
 }
 
 .breadcrumb-list {
@@ -837,6 +843,11 @@ button {
   height: 213px;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.map__frame {
+  width: 100%;
+  styleborder: 0;
 }
 
 .packages {
@@ -1562,6 +1573,7 @@ button {
   height: 123px;
   padding: 18px 23px;
   margin-bottom: 22px;
+  resize: none;
 }
 
 .footer__button {
@@ -1722,6 +1734,11 @@ button {
     padding-left: 62px;
     padding-right: 62px;
   }
+  .reviews__title {
+    margin-bottom: 50px;
+    font-size: 30px;
+    line-height: 38px;
+  }
   .packages-grid {
     display: none;
   }
@@ -1790,8 +1807,87 @@ button {
     max-width: 576px;
     width: 92%;
   }
-  .navbar__search, .navbar__user, .navbar-menu {
+  .container {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .navbar__search_mobile_hidden, .navbar__user_mobile_hidden {
     display: none;
+  }
+  .navbar__search_mobile_visible, .navbar__user_mobile_visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar__mobile_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+  .navbar-bottom {
+    display: none;
+    position: fixed;
+    top: 62px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 30px;
+  }
+  .navbar-bottom__visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar-menu__link {
+    margin-bottom: 20px;
+  }
+  .navbar-menu__link_mobile_visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar-menu__link_mobile_visible_user {
+    margin-bottom: 23px;
+  }
+  .navbar-menu__link_mobile_visible_input {
+    margin-bottom: 39px;
+  }
+  .navbar__search_mobile_visible_input {
+    margin-bottom: 39px;
+  }
+  .user__name_light {
+    color: #ffffff;
+    text-transform: none;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  body {
+    padding-top: 78px;
   }
   .menu-button {
     display: -webkit-box;
@@ -1891,11 +1987,19 @@ button {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-  .reviews-slider__button--prev--next {
+  .reviews-slider__button--next {
     right: 50%;
     margin-right: -90px;
     -webkit-transform: translate(50%, -50%);
             transform: translate(50%, -50%);
+  }
+  .reviews__title {
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    width: 255px;
+    margin: auto;
+    margin-bottom: 42px;
   }
   .packages-slide__card {
     width: 50%;
@@ -1971,6 +2075,15 @@ button {
   .slider {
     height: 250px;
   }
+  .slider-button {
+    background-size: 4px;
+  }
+  .slider-button__prev {
+    left: 10px;
+  }
+  .slider-button__next {
+    right: 10px;
+  }
   .hotel-slider {
     margin-bottom: 20px;
   }
@@ -1996,8 +2109,8 @@ button {
     display: none;
   }
   .footer-wrapper {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: minmax(100px, 1fr);
+        grid-template-columns: minmax(100px, 1fr);
     grid-row-gap: 30px;
   }
   .footer__logo {
@@ -2053,6 +2166,18 @@ button {
   }
   .footer__input {
     padding: 18px 23px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .footer__message {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .footer__icon-wrapper {
+    min-width: 30px;
+  }
+  .search__input_visible {
+    width: 255px;
   }
 }
 
