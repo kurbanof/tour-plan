@@ -12,6 +12,15 @@
 
   .card
     width: 230px     
+  
+  .footer
+    &__input
+      padding: 18px 8px 17px 23px
+    &__item--mb-2
+      font-size: 13px
+    &-nav  
+      &__list
+        margin-right: 205px
         
 @media (max-width: 992px)
   .container,
@@ -75,6 +84,41 @@
       display: none
     &-slider
       display: block
+  .footer
+    &-wrapper
+      grid-template-columns: repeat(6, 1fr)
+      grid-row-gap: 40px
+    
+    &__input
+      padding: 18px 62px 17px 23px
+    &__logo
+      grid-row: 1 / 2
+      grid-column: span 2
+      width: 104px
+    &__legal
+      grid-column: span 2
+    &__additional
+      grid-column: span 2
+    &__social
+      &-network
+        grid-row: 1 / 2
+        grid-column: span 4
+        align-self: center
+    &__categories
+      grid-row: 2 / 3
+      grid-column: span 2
+    &__contact
+      &-details
+        grid-row: 3
+        grid-column: span 5
+      &-form
+        grid-row: 4
+        grid-column: span 5
+    &-nav
+      justify-content: space-between
+      &__list
+        margin-right: 0
+  
         
 
   
@@ -159,6 +203,28 @@
       &__card
         width: 50%
       &__article
+  .footer
+    &__input
+      flex-basis: 100%
+      
+    &-nav
+      flex-wrap: wrap
+      &__link
+        margin-right: 11px
+        
+      &__list
+        flex-basis: 100%
+        justify-content: flex-start
+        margin-bottom: 10px
+    &__fields
+      flex-wrap: wrap
+      margin-bottom: 30px
+    &__info
+      flex-basis: 100%
+      order: -1
+      margin-bottom: 10px
+      display: block
+
     
 @media ( max-width:630px  )
   .packages
@@ -214,13 +280,54 @@
         padding-right: 30px
         &::after, &::before
           display: none
-        
+  .footer
+    &-wrapper
+      grid-template-columns: 1fr
+      grid-row-gap: 30px
+    &__logo
+      grid-row: 1
+      grid-column: 1
+    &__social
+      &-network
+        grid-row: 2
+        grid-column: 1
+    &__legal
+      grid-row: 3
+      grid-column: 1
+    &__additional
+      grid-row: 4
+      grid-column: 1
+    &__categories
+      grid-row: 5
+      grid-column: 1
+    &__contact
+      &-details
+        grid-row: 6
+        grid-column: 1
+      &-form
+        grid-column: 1
+        grid-row: 7
+    &__social
+      &-network
+        flex-wrap: wrap
+    &__title
+      &--inline
+        margin-bottom: 23px
+        flex-basis: 100%
+    &__input
+      padding: 18px 23px
 
 @media ( max-width:480px  )    
   .card
     height: 255px
   .packages-slide__card 
     width: 72%
+  .footer
+    &-nav
+      &__list
+        justify-content: space-between
+      &__link
+        margin-left: 0
 
 @media ( max-width:350px  )
   .packages
