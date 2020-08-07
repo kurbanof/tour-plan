@@ -29,14 +29,14 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'solenya63@gmail.com'; // Логин на почте
-    $mail->Password   = 'solenya2015'; // Пароль на почте
+    $mail->Username   = 'pocketblook225@gmail.com'; // Логин на почте
+    $mail->Password   = 'pocketbook740'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('solenya63@gmail.com', 'solenya'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('pocketblook225@gmail.com', 'pocket book'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('genius.ss24@gmail.com');  
+    $mail->addAddress('solenya63@gmail.com');  
 
     // Отправка сообщения
     $mail->isHTML(true);
