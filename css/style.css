@@ -597,6 +597,10 @@ button {
   margin-bottom: 0;
 }
 
+.hotel-info__name_thanks {
+  margin-bottom: 20px;
+}
+
 .hotel-info__description {
   margin: 5px 0;
 }
@@ -1557,15 +1561,17 @@ button {
 }
 
 .footer__input {
-  color: #ffffff;
+  color: #333333;
   border-radius: 4px;
   border: none;
-  padding: 18px 40px 17px 23px;
+  padding: 18px 0 18px 22px;
   margin-bottom: 15px;
+  -ms-flex-preferred-size: 47%;
+      flex-basis: 47%;
 }
 
 .footer__message {
-  color: #ffffff;
+  color: #333333;
   border-radius: 4px;
   border: none;
   -ms-flex-preferred-size: 100%;
@@ -1594,6 +1600,8 @@ button {
 }
 
 .footer__fields {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1654,9 +1662,6 @@ button {
   }
   .card {
     width: 230px;
-  }
-  .footer__input {
-    padding: 18px 8px 17px 23px;
   }
   .footer__item--mb-2 {
     font-size: 13px;
@@ -1749,9 +1754,6 @@ button {
     -ms-grid-columns: (1fr)[6];
         grid-template-columns: repeat(6, 1fr);
     grid-row-gap: 40px;
-  }
-  .footer__input {
-    padding: 18px 62px 17px 23px;
   }
   .footer__logo {
     -ms-grid-row: 1;
