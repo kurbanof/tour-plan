@@ -59,6 +59,8 @@
   .map
     width: 340px
     height: 210px
+  .newsletter
+    padding: 90px 0 92px 0
     
   
   .swiper
@@ -67,6 +69,8 @@
         width: 100%
   
   .activities 
+    padding-top: 30px
+    padding-bottom: 50px
     &-wrapper 
       flex-wrap: wrap
     &__card
@@ -79,6 +83,12 @@
         max-width: 580px
         padding-left: 62px
         padding-right: 62px
+      &__button
+        top: 50%
+        &--prev
+          left: 2px
+        &--next
+          right: 2px
     &__title
       margin-bottom: 50px
       font-size: 30px
@@ -89,6 +99,7 @@
     &-slider
       display: block
   .footer
+    padding-top: 70px
     &-wrapper
       grid-template-columns: repeat(6, 1fr)
       grid-row-gap: 40px
@@ -282,7 +293,8 @@
       &__article
   .footer
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
       
     &-nav
       flex-wrap: wrap
@@ -327,7 +339,49 @@
   .modal
     &__dialog
       padding: 25px 60px
-
+  .footer
+    &-wrapper
+      grid-template-columns: minmax(100px, 1fr)
+      grid-row-gap: 30px
+    &__logo
+      grid-row: 1
+      grid-column: 1
+    &__social
+      &-network
+        grid-row: 2
+        grid-column: 1
+    &__legal
+      grid-row: 3
+      grid-column: 1
+    &__additional
+      grid-row: 4
+      grid-column: 1
+    &__categories
+      grid-row: 5
+      grid-column: 1
+    &__contact
+      &-details
+        grid-row: 6
+        grid-column: 1
+      &-form
+        grid-column: 1
+        grid-row: 7
+    &__social
+      &-network
+        flex-wrap: wrap
+    &__title
+      &--inline
+        margin-bottom: 23px
+        flex-basis: 100%
+    &__input
+      padding: 18px 23px
+      &-group
+        flex-basis: 90%
+    &__message
+      flex-basis: 90%
+    &__icon
+      &-wrapper
+        min-width: 30px
         
     
 
@@ -370,49 +424,13 @@
         padding-right: 30px
         &::after, &::before
           display: none
+  
   .footer
-    &-wrapper
-      grid-template-columns: minmax(100px, 1fr)
-      grid-row-gap: 30px
-    &__logo
-      grid-row: 1
-      grid-column: 1
-    &__social
-      &-network
-        grid-row: 2
-        grid-column: 1
-    &__legal
-      grid-row: 3
-      grid-column: 1
-    &__additional
-      grid-row: 4
-      grid-column: 1
-    &__categories
-      grid-row: 5
-      grid-column: 1
-    &__contact
-      &-details
-        grid-row: 6
-        grid-column: 1
-      &-form
-        grid-column: 1
-        grid-row: 7
-    &__social
-      &-network
-        flex-wrap: wrap
-    &__title
-      &--inline
-        margin-bottom: 23px
-        flex-basis: 100%
     &__input
-      padding: 18px 23px
+      
       flex-basis: 100%
     &__message
       flex-basis: 100%
-    &__icon
-      &-wrapper
-        min-width: 30px
-  
   .search
     &__input
       &_visible
@@ -421,6 +439,8 @@
     &__dialog
       width: 80%
       padding: 25px 37px
+      height: 95%
+      overflow: scroll
     &__input
       width: 100%
     &__fields
@@ -445,6 +465,10 @@
         justify-content: space-between
       &__link
         margin-left: 0
+  .breadcrumb
+    &-list
+      padding: 18px 0 18px 0
+
 
 @media ( max-width:350px  )
   .packages
