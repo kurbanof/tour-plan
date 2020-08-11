@@ -1,10 +1,11 @@
 .newsletter
   position: relative
-  padding: 98px 0 87px 0
+  min-height: 260px
   // background-image: url(../img/newsletter-bg.jpg)
   background-repeat: no-repeat
   background-size: cover
   background-position: center
+  display: flex
   &::after
     content: ''
     position: absolute
@@ -21,7 +22,7 @@
     display: flex
     justify-content: space-between
     align-items: center
-    max-width: 731px
+    width: 731px
     margin: auto
     z-index: 2
   &-title
@@ -31,6 +32,7 @@
     font-weight: 300
     font-size: 24px
     line-height: 30px
+    max-width: 350px
     &__strong
       font-style: normal
       font-weight: 600

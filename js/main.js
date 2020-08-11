@@ -81,6 +81,27 @@ $(document).ready(function () {
     modalOverlay.removeClass("modal__overlay_visible");
     modalDialog.removeClass("modal__dialog_visible");
   };
+
+  //cardButton
+  var cardButton = $("[data-toggle=modal]");
+  var closeCardButton = $(".modal__close");
+  cardButton.on("click", openModal);
+  closeCardButton.on("click", closeModal);
+
+  function openModal() {
+    var modalOverlay = $(".modal__overlay");
+    var modalDialog = $(".modal__dialog");
+    modalOverlay.addClass("modal__overlay_visible");
+    modalDialog.addClass("modal__dialog_visible");
+  };
+
+  function closeModal(event) {
+    event.preventDefault();
+    var modalOverlay = $(".modal__overlay");
+    var modalDialog = $(".modal__dialog");
+    modalOverlay.removeClass("modal__overlay_visible");
+    modalDialog.removeClass("modal__dialog_visible");
+  };
   //Обработка формы
   $(".form").each(function() {
     $(this).validate({
@@ -99,7 +120,60 @@ $(document).ready(function () {
       }
     });
   });
+  
+  $(".newsletter__subscribe").validate({
+    errorClass: "invalid-newsletter",
+    messages: {
+      email: {
+        required: "Email uncorrect",
+        email: "Email uncorrect"
+      }
+    }  
+  });
+
+  $(document).ready(function () {
+    $("#news-email").mask("email")
+  });
+
+  $(document).ready(function () {
+    $("#input_email").mask("email")
+  });
+
+  $(document).ready(function () {
+    $('.mask-tel').mask('+7(000) 000-0000');
+  });
+
+
   AOS.init();
+
+  const footInput = document.querySelector('#footer-name');
+
+  footInput.addEventListener('input', (e) => {
+    if (!(/^[А-Яа-яa-zA-Z\s]*$/g.test(e.target.value)))
+      e.target.value = e.target.value.slice(0, -1)
+  });
+
+  const modInput = document.querySelector('#modal-name');
+
+  modInput.addEventListener('input', (e) => {
+    if (!(/^[А-Яа-яa-zA-Z\s]*$/g.test(e.target.value)))
+      e.target.value = e.target.value.slice(0, -1)
+  });
+
+  function init() {
+    var imgDefer = document.getElementsByTagName("img");
+    for (var i = 0; i < imgDefer.length; i++) {
+      if (imgDefer[i].getAttribute("data-src")) {
+        imgDefer[i].setAttribute(
+          "src",
+          imgDefer[i].getAttribute("data-src")
+        );
+      }
+    }
+  }
+  window.onload = init;
+
+  
 
 
 });
